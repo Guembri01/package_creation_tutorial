@@ -1,7 +1,12 @@
 import unittest
-from package_creation_tutorial.string_ops import reverse_string, count_vowels, capitalize_words
+from package_creation_tutorial.string_ops import (
+    reverse_string,
+    count_vowels,
+    capitalize_words
+)
 
 class TestStringOps(unittest.TestCase):
+    
     def test_reverse_string(self):
         """Test the reverse_string function."""
         self.assertEqual(reverse_string("hello"), "olleh")
@@ -16,8 +21,10 @@ class TestStringOps(unittest.TestCase):
         """Test the capitalize_words function."""
         self.assertEqual(capitalize_words("hello world"), "Hello World")
         self.assertEqual(capitalize_words("python programming"), "Python Programming")
+
     def test_capitalize_words_failing(self):
         """Test the capitalize_words function."""
-        self.assertEqual(capitalize_words("summer"), "summer")
+        self.assertEqual(capitalize_words("summer"), "Summer")
+    
 if __name__ == '__main__':
     unittest.main()
